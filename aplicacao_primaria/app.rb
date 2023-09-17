@@ -13,7 +13,7 @@ class Application < Sinatra::Base
     http                    = Net::HTTP.new(url.host, url.port)
     request                 = Net::HTTP::Post.new(url)
     request["Content-Type"] = "application/json"
-    request.body            = { "dados" => params[:dados] }.to_json
+    request.body            = { "dados" => params["dados"] }.to_json
 
     # begin
       response = http.request(request)
