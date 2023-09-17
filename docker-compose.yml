@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  aplicacao_primaria:
+    extends:
+      file: ./aplicacao_primaria/docker-compose.yml
+      service: app
+
+  aplicacao_secundaria:
+    extends:
+      file: ./aplicacao_secundaria/docker-compose.yml
+      service: app
